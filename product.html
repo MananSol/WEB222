@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Product</title>
+        <h2 style="text-align: center; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; text-shadow: 3px 3px white;">Name: Manan Harshadbhai Solanki</h2>
+        <script src="product.js"></script>
+        <link href="normalize.css" rel="stylesheet">
+    </head>
+    <body>
+        
+        <div id="form">
+            <div id="con">
+                <h1 style="text-align: center; color: rgba(253, 254, 254, 0.937);"><i class="info_form"></i><i><u>  FORM  </u></i></h1>
+            </div>
+
+            <fieldset>
+                <form id="product_form" name="signup" method="POST" action="https://httpbin.org/post" onsubmit='formValidation();'>>
+                    <div id="one">
+
+                        
+                        <label for = "Product_ID">Product_ID: <b></label>
+                        <input type="text" id="Product_ID" pattern="[0-9]{8}" size="50" placeholder="Enter the product ID here. (ex, 44455599)." maxlength="8" oninput="this.setCustomValidity('')" oninvalid="this.setCustomValidity('Must be 8 digit number!')" required/>
+                        <br><br>
+
+                        <label for="Product_desc">Product Description: <b></label>
+                            <textarea type="text" pattern="/^[A-Z][a-z][A-Z]+$/" id="Product_desc" size="50" placeholder="Enter the product descriotion." minlength="20" oninput="this.setCustomValidity('')" oninvalid="this.setCustomValidity('Must start with uppercase letter and should have atleast 20 characters')" required></textarea>
+                        <br><br>
+						
+                        <label for="Price">Price  <b>    </label>
+                        <input type="number" id="Price" pattern="/^[0-9]+$/" size="50" placeholder="Enter he price here." min="0" max="1000" required/>
+                        <br><br>
+						
+                        <label for="Username">Username  <b>    </label>
+                        <input type="text" id="Username" pattern="/^[A-Za-z]\w{6,}$/" size="50" placeholder="Enter the username here." minlength="6"required/>
+                        <br><br>
+
+                        <div class="supplier_status">
+                            <label class="status" for="optiontext">Select an option</label>
+                            <div class="col-md-6">
+                                <input type="checkbox" name="New Supplier" value="New Supplier" />New Supplier<br/>
+                                <input type="checkbox" name="Contract Signed" value="Contract Signed" />Contract Signed<br/>
+                                <input type="checkbox" name="Quality Tested" value="Quality Tested" />Hockey<br/><br/>
+                        </div>
+
+                        <br><br>
+
+                        <label for="email"> <b>Email address: </b></label> 
+                        <input type="email" id="email" name="email" size="50" placeholder="Enter your e-mail"required/>
+                        <br>
+                        <input type="hidden" name="lastName" id="lastName" value="Your last name goes here" />
+                        <br>
+                        <input type="hidden" name="studentId" id="studentId" value="Your student Id goes here" />
+
+                    </div>
+
+                    <div>
+                        <br>    
+                        <input type="submit" value="Submit">
+                        <input type="reset" value="Clear">
+                    </div>
+                </form>
+            </div>
+            </fieldset>
+    </body>
+</html>
